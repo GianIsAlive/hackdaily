@@ -34,3 +34,17 @@ function removeDupNode(linkedList) {
   }
   return linkedList;
 }
+
+// return kth to last element in a singly linked list
+function returnKthToLast(linkedList, k) {
+  let head1 = linkedList;
+  let head2 = linkedList;
+  for (let i = 0; i < k - 1; i++) {
+    head1 = head1.next;
+  }
+  while (head1.next) {
+    head1 = head1.next;
+    head2 = head2.next;
+  }
+  return head2;
+}
