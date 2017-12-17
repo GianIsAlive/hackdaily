@@ -48,3 +48,15 @@ function returnKthToLast(linkedList, k) {
   }
   return head2;
 }
+// write a function that reverses a linked list
+function reverseLinkedList(linkedList) {
+  let head = linkedList;
+  let reversed = null;
+  while (head) {
+    let temp = head.next;
+    head.next = reversed;
+    reversed = head;
+    head = temp;
+  }
+  return reversed;
+}
